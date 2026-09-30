@@ -1,0 +1,15 @@
+# 테스트는 H2 인메모리 사용
+spring:
+  datasource:
+    url: jdbc:h2:mem:shiftly;MODE=PostgreSQL
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+
+jwt:
+  secret: test-secret-test-secret-test-secret-test-secret
+  access-token-expiry: 1800
+  refresh-token-expiry: 1209600
