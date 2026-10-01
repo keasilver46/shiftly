@@ -1,11 +1,14 @@
-# 테스트는 H2 인메모리 사용
+# 테스트 전용 설정. 메인 application.yml 을 대체(shadow)하므로 필요한 값은 여기 다 적는다.
 spring:
+  profiles:
+    active: test
   datasource:
     url: jdbc:h2:mem:shiftly;MODE=PostgreSQL
     driver-class-name: org.h2.Driver
     username: sa
     password:
   jpa:
+    open-in-view: false
     hibernate:
       ddl-auto: create-drop
 
@@ -13,3 +16,8 @@ jwt:
   secret: test-secret-test-secret-test-secret-test-secret
   access-token-expiry: 1800
   refresh-token-expiry: 1209600
+
+app:
+  cors:
+    allowed-origins:
+      - http://localhost:5173

@@ -97,11 +97,16 @@ Table attendance {
 - **테이블명 `users`**: PostgreSQL에서 `user`는 예약어라 복수형 사용. JPA 엔티티는 `User`, `@Table(name = "users")`.
 - **주 52시간 집계는 테이블 없이 계산**: schedule(계획) 기준으로 프론트/백엔드 모두 계산. 캐시가 필요해지면 그때 추가.
 
+### 인증 테이블 (MVP 에 포함)
+
+| 테이블 | 용도 |
+|---|---|
+| refresh_token | 발급된 리프레시 토큰. user_id, token(unique), expires_at. 회전/로그아웃 시 삭제 |
+
 ### 2단계에서 추가될 테이블
 
 | 테이블 | 용도 |
 |---|---|
-| refresh_token | JWT 리프레시 토큰 회전 |
 | payroll | 월별 직원 급여 정산 결과 (마감 후 스냅샷) |
 | payroll_item | 기본급 / 연장 / 야간 / 휴일 항목별 금액 |
 | holiday | 공휴일 (휴일 수당 판단) |
