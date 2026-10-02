@@ -1,0 +1,82 @@
+/* Shiftly 디자인 토큰
+   원칙: 색은 근무 유형과 상태에만. 나머지는 잉크(남색) 하나와 회색 단계. */
+:root {
+  /* 바탕과 잉크 */
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --field-bg: #f1f3f8;   /* 입력칸 채움색. 순백 바탕에서 칸을 구분한다 */
+  --ink: #0b1437;
+  --ink-70: #3d4766;
+  --ink-45: #7a849e;
+  --ink-20: #b8c1d4;
+  --ink-10: #e3e8f1;
+
+  /* 의미 색 */
+  --shift-open: #ffb020;   /* 오픈조: 아침, 선명한 앰버 */
+  --shift-close: #6246ea;  /* 마감조: 저녁, 선명한 바이올렛 */
+  --danger: #e03131;
+  --danger-bg: #fdeaea;
+
+  /* 타이포 */
+  --font: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont,
+    system-ui, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+  --fs-13: 0.8125rem;
+  --fs-15: 0.9375rem;
+  --fs-18: 1.125rem;
+  --fs-24: 1.5rem;
+  --fs-40: 2.5rem;
+
+  /* 형태 */
+  --r-control: 6px;  /* 입력, 버튼 */
+  --r-block: 4px;    /* 근무 블록 */
+  --focus: 0 0 0 3px rgba(98, 70, 234, 0.35);
+  --gutter: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: var(--fs-15);
+  line-height: 1.5;
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
