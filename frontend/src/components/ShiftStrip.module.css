@@ -1,0 +1,36 @@
+.strip {
+  display: inline-flex;
+  gap: 4px;
+}
+
+.cell {
+  width: 22px;
+  height: 10px;
+  border-radius: var(--r-block);
+}
+
+.lg {
+  gap: 6px;
+}
+
+.lg .cell {
+  width: 40px;
+  height: 18px;
+}
+
+.open {
+  background: var(--shift-open);
+}
+
+.close {
+  background: var(--shift-close);
+}
+
+.off {
+  background: transparent;
+  border: 1.5px solid var(--ink-20);
+}
+
+.lg .off {
+  border-width: 2px;
+}

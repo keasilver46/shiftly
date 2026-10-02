@@ -1,0 +1,42 @@
+.page {
+  min-height: 100dvh;
+  padding: 48px var(--gutter);
+}
+
+.panel {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.title {
+  margin-top: 18px;
+  font-size: var(--fs-24);
+  font-weight: 600;
+}
+
+.meta {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 8px 16px;
+  margin: 24px 0;
+}
+
+.meta dt {
+  color: var(--ink-45);
+  font-size: var(--fs-13);
+  line-height: 1.7;
+}
+
+.meta dd {
+  margin: 0;
+}
+
+.note {
+  color: var(--ink-70);
+}
+
+.logout {
+  margin-top: 28px;
+  width: auto;
+  padding: 0 20px;
+}

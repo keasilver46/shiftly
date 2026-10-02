@@ -1,0 +1,79 @@
+.page {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px var(--gutter);
+}
+
+.panel {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 36px;
+}
+
+.title {
+  margin-top: 20px;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  margin-top: 4px;
+  color: var(--ink-70);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* 에러 자리 미리 확보: 메시지가 생겨도 버튼이 아래로 밀리지 않는다 */
+.status {
+  min-height: 20px;
+  margin-top: -6px;
+  font-size: var(--fs-13);
+  color: var(--danger);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 32px 0 20px;
+  font-size: var(--fs-13);
+  color: var(--ink-45);
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--ink-10);
+}
+
+.demo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.demoHint {
+  margin-top: 4px;
+  font-size: var(--fs-13);
+  color: var(--ink-45);
+}
+
+@media (min-width: 640px) {
+  .page {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
